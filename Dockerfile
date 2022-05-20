@@ -5,7 +5,7 @@ LABEL maintainer="declan.lynch@dcsg.com"
 EXPOSE 5200 5100
 
 ENV CODEBASE_URL file:/root/Protege_3.5/protege.jar
-ENV EAM_VERSION 62
+ENV EAM_VERSION 615
 
 # Install some tools
 RUN apk update
@@ -38,6 +38,7 @@ COPY support/startup.sh /
 COPY support/run_protege_server_fix.sh /
 
 # Setup Environment
+ENV CATALINA_OPTS="-Xms1G -Xmx2G"
 ENV JAVA_HOME /usr/lib/jvm/default-jvm
 WORKDIR /root/Protege_3.5/
 
