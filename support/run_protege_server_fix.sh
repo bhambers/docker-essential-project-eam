@@ -41,7 +41,7 @@ MAINCLASS=edu.stanford.smi.protege.server.Server
 
 
 # ------------------- JVM Options ------------------- 
-MAX_MEMORY=-Xms1G -Xmx2G
+MAX_MEMORY="-Xms1G -Xmx2G"
 HEADLESS=-Djava.awt.headless=true
 CODEBASE_URL=file:/root/Protege_3.5/protege.jar
 CODEBASE=-Djava.rmi.server.codebase=$CODEBASE_URL
@@ -49,7 +49,7 @@ HOSTNAME_PARAM=-Djava.rmi.server.hostname=localhost
 TX="-Dtransaction.level=READ_COMMITTED"
 LOG4J_OPT="-Dlog4j.configuration=file:log4j.xml"
 
-OPTIONS="$MAX_MEMORY $HEADLESS $CODEBASE $HOSTNAME_PARAM ${TX} ${LOG4J_OPT}"
+OPTIONS="${MAX_MEMORY} $HEADLESS $CODEBASE $HOSTNAME_PARAM ${TX} ${LOG4J_OPT}"
 
 #
 # Instrumentation debug, delay simulation,  etc
