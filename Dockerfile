@@ -26,10 +26,10 @@ COPY support/auto-install.xml ./
 RUN java -jar essentialinstallupgrade67.jar auto-install.xml
 
 # Install Essential View and Import Utilities
-RUN wget --tries=3 --progress=bar:force:noscroll https://essential-cdn.s3.eu-west-2.amazonaws.com/viewer/essential_viewer_6156.war
-RUN wget --tries=3 --progress=bar:force:noscroll https://essential-cdn.s3.eu-west-2.amazonaws.com/import-utility/essential_import_utility_256.war
-RUN mv essential_viewer_6156.war /usr/local/tomcat/webapps/essential_viewer.war
-RUN mv essential_import_utility_256.war /usr/local/tomcat/webapps/essential_import_utility.war
+RUN wget --tries=3 --progress=bar:force:noscroll https://essential-cdn.s3.eu-west-2.amazonaws.com/viewer/essential_viewer_6181.war
+RUN wget --tries=3 --progress=bar:force:noscroll https://essential-cdn.s3-eu-west-2.amazonaws.com/import-utility/essential_import_utility_27.war
+RUN mv essential_viewer_6181.war /usr/local/tomcat/webapps/essential_viewer.war
+RUN mv essential_import_utility_27.war /usr/local/tomcat/webapps/essential_import_utility.war
 
 # Copy data & startup scripts
 COPY server/* /opt/essentialAM/server/

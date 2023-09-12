@@ -1,39 +1,33 @@
-; Wed Jul 11 20:59:12 CDT 2018
+; Tue Mar 06 14:28:54 PST 2012
 ; 
-;+ (version "3.5")
-;+ (build "Build 663")
+;+ (version "3.4.8")
+;+ (build "Build 629")
 
-([metaproject_Class0] of  Group
+([metaproject_Class0] of  User
 
-	(member [metaproject_Class20008])
-	(name "Architects")
-	(policyModifiableByClient TRUE))
+	(group [metaproject_Instance_0])
+	(name "Csongor Nyulas")
+	(password "fc31e1e527224b8819358c8c7de26db0")
+	(salt "f31290896d4576db"))
+
+([metaproject_Class1] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Samson Tu")
+	(password "fe83f7198cae4ed1e9065cbc9d04b33c")
+	(salt "cb67da39cf045f47"))
 
 ([metaproject_Class10000] of  ServerAppliedOperation
 
 	(description "The operation of shutting down the server.")
 	(name "ShutdownServer"))
 
-([metaproject_Class10005] of  GroupOperation
+([metaproject_Class10001] of  User
 
-	(allowedGroup [metaproject_Class0])
-	(allowedOperation
-		[metaproject_Class20006]
-		[metaproject_Class20007]
-		[metaproject_Class30000]
-		[metaproject_Class2]
-		[nci_metaproject_Instance_60009]
-		[nci_metaproject_Instance_60010]))
-
-([metaproject_Class10006] of  Project
-
-	(allowedGroupOperation
-		[metaproject_Instance_10008]
-		[metaproject_Class10005])
-	(annotationProject [metaproject_Class40000])
-	(location "/opt/essentialAM/essential_baseline_v6_15.pprj")
-	(name "Collaborative Baseline")
-	(policyModifiableByClient TRUE))
+	(group [metaproject_Instance_0])
+	(name "Dilvan Moreira")
+	(password "bda0d06e2e6b6516c73cbf33035cd1a0")
+	(salt "3071102d65b0b679"))
 
 ([metaproject_Class2] of  ProjectAppliedOperation
 
@@ -77,12 +71,11 @@
 
 	(description "A admin user that can perform adminisitrative operations on the Protege server.")
 	(group
-		[metaproject_Class20003]
 		[metaproject_Instance_0]
-		[metaproject_Class0])
+		[metaproject_Class20003])
 	(name "Admin")
-	(password "574187203a6762fb25b06341115df74c")
-	(salt "b11cdeaff396938a"))
+	(password "0235b8f25cacfecdb0adb560c95da1a9")
+	(salt "0b209d16f20a5dac"))
 
 ([metaproject_Class20009] of  Server
 
@@ -90,7 +83,6 @@
 		[metaproject_Class20010]
 		[metaproject_Class30003])
 	(description "The server on which the policies apply.\nCurrent implementaion does not take into account the hostname, so all the policies (allowed group operations) are applied to this one instance.")
-	(hostName "localhost")
 	(name "MyServer"))
 
 ([metaproject_Class20010] of  GroupOperation
@@ -103,6 +95,11 @@
 		[metaproject_Class20007]
 		[metaproject_Class10000]))
 
+([metaproject_Class3] of  GroupOperation
+
+	(allowedGroup [metaproject_Instance_0])
+	(allowedOperation [metaproject_Class2]))
+
 ([metaproject_Class30000] of  GroupAppliedOperation
 
 	(description "The operation of adding or removing users to a group. (not enforced)")
@@ -111,9 +108,9 @@
 ([metaproject_Class30001] of  User
 
 	(group
-		[metaproject_Class20003]
+		[metaproject_Instance_0]
 		[metaproject_Class30002]
-		[metaproject_Instance_0])
+		[metaproject_Class20003])
 	(name "webprotege")
 	(password "f7bcce407455edd3befd66e6405da28d")
 	(salt "574c25cbabe1feed"))
@@ -128,37 +125,145 @@
 	(allowedGroup [metaproject_Class30002])
 	(allowedOperation [metaproject_Class20000]))
 
-([metaproject_Class40000] of  Project
-
-	(allowedGroupOperation
-		[metaproject_Instance_10008]
-		[metaproject_Class10005])
-	(location "/opt/essentialAM/annotation_essential_baseline_v6_15.pprj")
-	(name "Collaborative Baseline Annotations")
-	(policyModifiableByClient TRUE))
-
 ([metaproject_Instance_0] of  Group
 
 	(description "This group is intended to represent all the users.\n\nNewly created users are added to this group by default.")
 	(member
 		[metaproject_Instance_10002]
+		[metaproject_Instance_10003]
+		[metaproject_Instance_10004]
+		[metaproject_Instance_10005]
+		[metaproject_Instance_10006]
+		[metaproject_Instance_10007]
+		[metaproject_Class0]
+		[metaproject_Class1]
+		[metaproject_Class10001]
 		[metaproject_Class20008]
 		[metaproject_Class30001])
 	(name "World"))
+
+([metaproject_Instance_10000] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(description "Frames project")
+	(location "examples/newspaper/newspaper.pprj")
+	(name "Newspaper")
+	(owner [metaproject_Instance_10005])
+	(policyModifiableByClient TRUE))
 
 ([metaproject_Instance_10002] of  User
 
 	(group [metaproject_Instance_0])
 	(name "Guest")
-	(password "6851f460e3f3bc2450a315108374dccf")
-	(salt "d92345b3fba2a63b"))
+	(password "d376e3cdc24b4fdfbe012b28b7114d46")
+	(salt "db699848b1a45b2c"))
+
+([metaproject_Instance_10003] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Jennifer Vendetti")
+	(password "c4985f0ea03cd107a973590af106d667")
+	(salt "abe3c5a657a429b3"))
+
+([metaproject_Instance_10004] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Natasha Noy")
+	(password "5255d56b90b79cdd93acd5894ee55709")
+	(salt "8b2c9745dd21d0a9"))
+
+([metaproject_Instance_10005] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Ray Fergerson")
+	(password "2f659e40c792b01f6caa9d4fa3ca99c6")
+	(salt "57d803513a2f468e"))
+
+([metaproject_Instance_10006] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Tania Tudorache")
+	(password "9c83beacd15689a57a2c993f5b0a570a")
+	(salt "391cfea10ef1406a"))
+
+([metaproject_Instance_10007] of  User
+
+	(group [metaproject_Instance_0])
+	(name "Timothy Redmond")
+	(password "af10c84508bd08042aad6ea1d88c6206")
+	(salt "5dd198d580069580"))
 
 ([metaproject_Instance_10008] of  GroupOperation
 
 	(allowedGroup [metaproject_Instance_0])
 	(allowedOperation
 		[nci_metaproject_Instance_60009]
-		[metaproject_Class2]))
+		[nci_metaproject_Instance_60010]))
+
+([metaproject_Instance_20000] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(description "OWL project")
+	(location "examples/pizza/pizza.owl.pprj")
+	(name "Pizza")
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_20002] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(description "Frames project")
+	(location "examples/wines/wines.pprj")
+	(name "Wines")
+	(owner [metaproject_Instance_10004])
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_30000] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(annotationProject [metaproject_Instance_40001])
+	(description "The OWL pizza project with collaborative toppings :)")
+	(location "examples/collaborativePizza/collaborativePizza.owl.pprj")
+	(name "Collaborative Pizza")
+	(owner [metaproject_Instance_10006])
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_30001] of  Project
+
+	(allowedGroupOperation [metaproject_Instance_10008])
+	(description "Annotation project for the \"Collaborative Newspaper\" project as an RDFS ontology.")
+	(location "examples/collaborativeNewspaper/annotation_collaborativeNewspaper.pprj")
+	(name "Collaborative Newspaper Annotations")
+	(owner [metaproject_Instance_10006])
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_40000] of  Project
+
+	(allowedGroupOperation
+		[metaproject_Instance_10008]
+		[metaproject_Class3])
+	(annotationProject [metaproject_Instance_30001])
+	(description "Example on how to configure a collaborative project.")
+	(location "examples/collaborativeNewspaper/collaborativeNewspaper.pprj")
+	(name "Collaborative Newspaper")
+	(owner [metaproject_Instance_10006])
+	(policyModifiableByClient TRUE))
+
+([metaproject_Instance_40001] of  Project
+
+	(allowedGroupOperation [metaproject_Instance_10008])
+	(description "The annotation project for Collaborative Pizza")
+	(location "examples/collaborativePizza/annotation_collaborativePizza.owl.pprj")
+	(name "Collaborative Pizza Annotations")
+	(owner [metaproject_Instance_10006])
+	(policyModifiableByClient TRUE))
 
 ([nci_metaproject_Instance_60009] of  ProjectAppliedOperation
 
