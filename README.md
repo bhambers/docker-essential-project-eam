@@ -8,7 +8,7 @@ Essential Model is 6.15
 
 ```shell
 docker build -t essential/eam .
-docker run -d -p 8080:8080 -p 5200:5200 -p 5100:5100 v- essential_data:/opt/essentialAM --name essentialEAM essential/eam
+docker run -d --restart=always -p 8080:8080 -p 5200:5200 -p 5100:5100 -v essential_data:/opt/essentialAM --name essentialEAM essential/eam
 ```
 
 **Essential Viewer**
