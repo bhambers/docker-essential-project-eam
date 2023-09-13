@@ -35,3 +35,10 @@ Host Maschine Name: locahost:5100
 Username: Admin
 
 Password : 12345
+
+**Data Load**
+
+How to set up an import and import a spreadsheet in Essential Open Source.
+
+[Essential Import Utility - set up and load](https://www.youtube.com/watch?v=uWIrPJW-LMY)
+
