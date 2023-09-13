@@ -24,6 +24,7 @@ http://localhost:8080/essential_viewer (no login needed)
 http://localhost:8080/essential_import_utility
 
 Username: admin@admin.com
+
 Password: admin
 
 **Protege Client**
@@ -35,6 +36,7 @@ Open Other... -> Server
 Host Maschine Name: locahost:5100
 
 Username: Admin
+
 Password : 12345
 
 ### Data Load instructions
