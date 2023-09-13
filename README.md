@@ -23,7 +23,6 @@ Username: admin@admin.com
 
 Password: admin
 
-
 **Protege Client**
 
 /Protege_3.5/run_protege.sh
