@@ -45,3 +45,7 @@ How to set up an import and import a spreadsheet in Essential Open Source.
 
 [Essential Import Utility - set up and load](https://www.youtube.com/watch?v=uWIrPJW-LMY)
 
+
+### Essential Release Notes
+
+[Essentials Notes](https://enterprise-architecture.org/resources/essential-release-notes/)
